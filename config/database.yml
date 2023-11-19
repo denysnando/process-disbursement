@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+
+development:
+  <<: *default
+  database: sequra_development
+
+test:
+  <<: *default
+  database: sequra_test
+
+production:
+  <<: *default
+  database: sequra_production
+  username: <%= ENV["DATABASE_USERNAME"] %>
+  password: <%= ENV["DATABASE_PASSWORD"] %>
