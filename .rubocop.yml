@@ -49,7 +49,11 @@ RSpec/RepeatedExampleGroupDescription:
   Enabled: false
 RSpec/RepeatedExampleGroupBody:
   Enabled: false
+RSpec/MultipleExpectations:
+  Enabled: false
 Migration/DepartmentName:
+  Enabled: false
+RSpec/IndexedLet:
   Enabled: false
 
 # Style
