@@ -20,6 +20,7 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_26_201239) do
     t.decimal "amount_without_tax", precision: 10, scale: 2, default: "0.0", null: false
     t.integer "year"
     t.integer "week"
+    t.string "reference"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["merchant_id"], name: "index_disbursements_on_merchant_id"
@@ -40,7 +41,7 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_26_201239) do
   create_table "monthly_fees", force: :cascade do |t|
     t.bigint "merchant_id"
     t.integer "year"
-    t.integer "week"
+    t.integer "month"
     t.decimal "amount", precision: 10, scale: 2
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

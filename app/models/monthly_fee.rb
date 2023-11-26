@@ -5,6 +5,6 @@ class MonthlyFee < ApplicationRecord
   belongs_to :merchant
 
   # Validations
-  validates :year, :week, numericality: { only_integer: true }
+  validates :year, :month, numericality: { only_integer: true }
   validates :amount, numericality: true
 end

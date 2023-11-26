@@ -62,7 +62,7 @@ class ProcessDisbursements
     MonthlyFee.create!(
       merchant_id: merchant.id,
       year: month.year,
-      week: month.strftime('%U').to_i,
+      month: month.month,
       amount:
     )
   end
@@ -73,9 +73,20 @@ class ProcessDisbursements
       amount_without_tax: order.amount,
       year: order.created_at.strftime('%Y').to_i,
       week: order.created_at.strftime('%U').to_i,
-      merchant_id: merchant.id
+      merchant_id: merchant.id,
+      reference: alphanumeric_key
     )
 
     order.update(disbursement_id: disbursement.id, completed_at: Time.current)
+  end
+
+  def alphanumeric_key
+    @alphanumeric_key ||= generate_alphanumeric_for_today
+  end
+
+  def generate_alphanumeric_for_today
+    today = Time.zone.now.strftime('%Y%m%d')
+    random_alphanumeric = SecureRandom.alphanumeric(8)
+    "#{today}-#{random_alphanumeric}"
   end
 end
