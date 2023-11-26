@@ -1,0 +1,5 @@
+# Once a day sidekiq-cron is triggered to perform this work ProcessDisbursementsWorker
+# cron value can be changed to run more than once a day
+process_disbursements:
+   cron: "50 7 * * *"
+   class: "ProcessDisbursementsWorker"
