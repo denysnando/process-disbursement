@@ -55,6 +55,8 @@ Migration/DepartmentName:
   Enabled: false
 RSpec/IndexedLet:
   Enabled: false
+RSpec/MessageSpies:
+  enabled: false
 
 # Style
 Style/Documentation:
