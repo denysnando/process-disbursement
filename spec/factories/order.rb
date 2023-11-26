@@ -5,5 +5,6 @@ FactoryBot.define do
     amount { 10 }
     identifier { Faker::IDNumber.valid }
     merchant_reference { Faker::IDNumber.valid }
+    created_at { Time.current }
   end
 end

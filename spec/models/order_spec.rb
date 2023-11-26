@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe Order, type: :model do
+RSpec.describe Order do
   describe 'validations' do
     it { is_expected.to validate_presence_of(:amount) }
     it { is_expected.to validate_numericality_of(:amount).is_greater_than(0) }

@@ -6,7 +6,6 @@ RSpec.describe Disbursement do
   describe 'validations' do
     subject { build(:merchant) } # Assuming you have FactoryBot for creating test objects
 
-    it { is_expected.to validate_presence_of(:name) }
     it { is_expected.to validate_presence_of(:disbursement_frequency) }
     it { is_expected.to validate_presence_of(:reference) }
     it { is_expected.to validate_uniqueness_of(:reference).case_insensitive }

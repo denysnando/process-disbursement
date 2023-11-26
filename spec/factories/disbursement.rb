@@ -2,11 +2,10 @@
 
 FactoryBot.define do
   factory :disbursement do
-    amount_disbursed { 0 }
-    amount_of_orders { 0 }
-    amount_monthly_fee_charged { 0 }
-    counter_disbursed { 0 }
-    counter_monthly_fee_charged { 0 }
+    merchant
+    amount { 0 }
+    amount_without_tax { 0 }
     year { Time.current.year }
+    week { 5 }
   end
 end

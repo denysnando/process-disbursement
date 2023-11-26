@@ -2,10 +2,9 @@
 
 FactoryBot.define do
   factory :merchant do
-    name { Faker::Name.name }
     email { Faker::Internet.email }
     reference { Faker::IDNumber.valid }
-    disbursement_frequency { 'MONTLY' }
+    disbursement_frequency { 'DAILY' }
     minimum_monthly_fee { 1.5 }
     live_on { Faker::Date.between(from: 2.days.ago, to: Time.zone.today) }
 
