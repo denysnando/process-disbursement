@@ -2,7 +2,7 @@
 This is the coding challenge for people who applied to a backend developer position at SeQura. It's been designed to be a simplified version of the same problems we deal with.
 
 ## The challenge
-SeQura provides ecommerce shops (merchants) a flexible payment method so their customers (shoppers) can purchase and receive goods without paying upfront. SeQura earns a small fee per purchase and pays out (disburse) the merchant once the order is marked as completed.
+SeQura provides e-commerce shops (merchants) a flexible payment method so their customers (shoppers) can purchase and receive goods without paying upfront. SeQura earns a small fee per purchase and pays out (disburses) the merchant once the order is marked as completed.
 
 The operations manager is now asking you to make a system to calculate how much money should be disbursed to each merchant based on the following rules:
 
@@ -35,10 +35,16 @@ id           | MERCHANT REFERENCE      | AMOUNT | CREATED AT
 871e0d072782 | mraz_and_sons           | 213.97 | 2023-01-01
 ```
 
+``` 
+Year| Number of disbursements| Amount disbursed to merchants| Amount of order fees| Number of monthly fees charged | Amount of monthly fees charged
+2022| 138287                 | 1.261.521.39 €               | 27.162.221,29  €    | 11                             | 193,54 €
+2023| 837485                 | 139.063.083,17 €             | 140.324.604,56 €    | 26                             | 468,35 €
+```
+
 We expect you to:
 
 * Create the necessary data structures and a way to persist them for the provided data. You don’t have to follow CSV’s schema if you think another one suits you better.
-* Calculate and store the disbursements following described requirements for all the orders included in the CSV, and prepare the system to do the same for new orders.
+* Calculate and store the disbursements following the described requirements for all the orders included in the CSV, and prepare the system to do the same for new orders.
 * Fill the following table and include it in the README.
 
 
@@ -72,7 +78,7 @@ Before running the project, make sure you have the following:
      bundle exec rake db:migrate
      bundle exec rake db:seed
      bundle exec sidekiq
-     bundle exec rake disbursement:process_disbursement # you can run the rake as soon as you start the project, however, a sidekiq-cron runs the job every day at 7:50
+     bundle exec rake disbursement:process_disbursement # you can run the rake as soon as you start the project
    ```
 
 ## Usage
