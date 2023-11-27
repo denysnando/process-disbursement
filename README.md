@@ -16,14 +16,16 @@ The operations manager is now asking you to make a system to calculate how much 
   * 0.95% for amounts between 50€ - 300€
   * 0.85% for amounts over 300€
 
-
+```
 Merchants sample
 id                                   | REFERENCE                 | EMAIL                             | LIVE_ON    | DISBURSEMENT_FREQUENCY | MINIMUM_MONTHLY_FEE
 2ae89f6d-e210-4993-b4d1-0bd2d279da62 | treutel_schumm_fadel      | info@treutel-schumm-and-fadel.com | 2022-01-01 | WEEKLY                 | 29.0
 6596b87d-7f13-460f-ba1a-00872c770092 | windler_and_sons          | info@windler-and-sons.com         | 2021-05-25 | DAILY                  | 29.0
 70de4478-bfa8-4c4c-97f1-4a0a149f8264 | mraz_and_sons             | info@mraz-and-sons.com            | 2020-03-20 | WEEKLY                 |  0.0
 52f0e308-4a9d-4b32-ace4-c491f457d9a5 | cummerata_llc             | info@cummerata-llc.com            | 2019-02-04 | DAILY                  | 35.0
+```
 
+```
 Orders samples
 id           | MERCHANT REFERENCE      | AMOUNT | CREATED AT
 056d024481a9 | treutel_schumm_fadel    |  61.74 | 2023-01-01
@@ -31,7 +33,7 @@ id           | MERCHANT REFERENCE      | AMOUNT | CREATED AT
 5eaeabf54862 | mraz_and_sons           | 373.33 | 2023-01-01
 70530cdc7b59 | treutel_schumm_fadel    |  60.48 | 2023-01-01
 871e0d072782 | mraz_and_sons           | 213.97 | 2023-01-01
-
+```
 
 We expect you to:
 
@@ -60,11 +62,11 @@ Before running the project, make sure you have the following:
 1. Clone this repository to your local machine:
 
    ```bash
-     decompress the project
+     git clone https://github.com/denysnando/process-disbursement
    ```
 2. Setup
    ```bash
-     cd sequra-backend/
+     cd process-disbursement/
      bundle
      bundle exec rake db:create
      bundle exec rake db:migrate
