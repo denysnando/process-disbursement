@@ -35,6 +35,7 @@ id           | MERCHANT REFERENCE      | AMOUNT | CREATED AT
 871e0d072782 | mraz_and_sons           | 213.97 | 2023-01-01
 ```
 
+Final calculate disbursed
 ``` 
 Year| Number of disbursements| Amount disbursed to merchants| Amount of order fees| Number of monthly fees charged | Amount of monthly fees charged
 2022| 138287                 | 1.261.521.39 €               | 27.162.221,29  €    | 11                             | 193,54 €
